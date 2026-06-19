@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>HomeMom Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>HomeMom</h1>
+  <p>Гэрээсээ орлого олох сургалт & ebook</p>
+  <button onclick="openLogin()">Нэвтрэх / Бүртгүүлэх</button>
+</header>
+
+<!-- ABOUT -->
+<section>
+  <h2>Бидний тухай</h2>
+  <p>HomeMom бол гэртээ хүүхдээ хардаг ээжүүдэд гэрээсээ ажиллах, онлайн орлого олох сургалтын платформ.</p>
+</section>
+
+<!-- PRODUCTS -->
+<section>
+  <h2>Ангилал</h2>
+
+  <div class="card">
+    <h3>Ebook</h3>
+    <button onclick="addToCart('Ebook', 25000)">Сагсанд нэмэх</button>
+  </div>
+
+  <div class="card">
+    <h3>Сургалт</h3>
+    <button onclick="addToCart('Course', 80000)">Сагсанд нэмэх</button>
+  </div>
+</section>
+
+<!-- CART -->
+<section>
+  <h2>🛒 Сагс</h2>
+  <div id="cart"></div>
+  <h3 id="total">Нийт: 0₮</h3>
+
+  <button onclick="openPayment()">Төлбөр төлөх</button>
+</section>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal">
+  <div class="box">
+    <h3>Бүртгэл</h3>
+    <input id="firstName" placeholder="Нэр" required>
+    <input id="lastName" placeholder="Овог" required>
+    <input id="email" placeholder="E-mail" required>
+    <button onclick="register()">Бүртгүүлэх</button>
+  </div>
+</div>
+
+<!-- PAYMENT -->
+<div id="paymentBox" class="modal">
+  <div class="box">
+    <h3>Төлбөрийн данс</h3>
+    <p>📌 Хаан банк: :5107055646 Ануужин</p>
+    <button onclick="checkPayment()">Төлбөр шалгах</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
